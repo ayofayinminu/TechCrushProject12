@@ -1,15 +1,15 @@
- Last-Mile Delivery Failure Prediction — Group 12 (Logistics)
+ Last-Mile Delivery Failure Prediction  Group 12 (Logistics)
 
 ## Project Overview
 
 This project addresses a real-world problem in the **logistics sector**: predicting whether a delivery will **fail or succeed** before it happens, using operational, environmental, and route-related data from last-mile deliveries in Nigeria.
-Delivery failures (missed drop-offs, flooded roads, unavailable customers, vehicle breakdowns, wrong addresses, etc.) cost logistics companies time, fuel, and customer trust. By predicting failure risk in advance, dispatchers and delivery partners can intervene early — rerouting, reassigning drivers, confirming addresses, or rescheduling — instead of reacting after the fact.
+Delivery failures (missed drop-offs, flooded roads, unavailable customers, vehicle breakdowns, wrong addresses, etc.) cost logistics companies time, fuel, and customer trust. By predicting failure risk in advance, dispatchers and delivery partners can intervene early rerouting, reassigning drivers, confirming addresses, or rescheduling  instead of reacting after the fact.
 
 **Goal:** Build and deploy a machine learning model that predicts `delivery_failure` (0 = Delivered, 1 = Failed) for a given delivery, based on features known at or near dispatch time.
 
 ## Problem Statement
 
-Given details about a delivery — such as distance, package type, vehicle, weather, traffic, road condition, driver experience, and delivery attempts — can we predict whether that delivery will fail?
+Given details about a delivery such as distance, package type, vehicle, weather, traffic, road condition, driver experience, and delivery attempts can we predict whether that delivery will fail?
 
 This is framed as a **binary classification problem**, with `delivery_failure` as the target variable.
 

@@ -94,6 +94,6 @@ This is framed as a **binary classification problem**, with `delivery_failure` a
 
 **Final Dataset**: ~9,850 clean rows, ready for preprocessing (one-hot encoding, train/test split).
 ## Next Steps
-**1. Apply one-hot encoding to categorical features.**
-**2. Split data into train and test sets.**
-**3. Start baseline modeling and feature importance analysis.**
+1. **Apply one-hot encoding to categorical features.**
+2. **Split data into train and test sets.**
+3. **Start baseline modeling and feature importance analysis.**

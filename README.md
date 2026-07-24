@@ -78,3 +78,18 @@ This is framed as a **binary classification problem**, with `delivery_failure` a
 
 ## Status
 **Exploratory Data Analysis (EDA)**
+## EDA — Failure Rate by Categorical Variable
+
+| Step | Finding | Decision |
+|---|---|---|
+| Correlation | Pearson ignores categorical variables | Use failure rate analysis instead |
+| Data leakage | 6 columns reveal the outcome after the fact | Excluded from the model |
+| Categorical variables | Threshold effect, not linear | One-hot encoding planned |
+| `delivery_partner` | Failure rate almost identical across partners | Kept, final decision after feature importance |
+| Missing values | Only `failure_reason` (already excluded) | Nothing to impute |
+| Duplicates | 0 | Nothing to do |
+| Data entry error | "Hevy" → "Heavy" (92 rows) | Fixed |
+| Outlier `distance_km` | 700 km repeated, inconsistent (1.06%) | Rows deleted |
+| Outlier `package_weight_kg` | Negative, impossible (0.36%) | Rows deleted |
+
+**Final Dataset**: ~9,850 clean rows, ready for preprocessing (one-hot encoding, train/test split).

@@ -97,3 +97,39 @@ This is framed as a **binary classification problem**, with `delivery_failure` a
 1. **Apply one-hot encoding to categorical features.**
 2. **Split data into train and test sets.**
 3. **Start baseline modeling and feature importance analysis.**
+
+**gravitytito** balogunbolatito546@gmail.com
+---
+---
+
+
+## Status
+**1. Exploratory Data Analysis (EDA)**
+- Generated summary statistics with `df.describe()`
+- Computed a correlation matrix for numeric features
+- Visualized correlations using a Seaborn heatmap (`rocket` colormap)
+- Inspected dataset shape and structure with `df.shape` and `df.head()`
+**2. Categorical Feature Encoding**
+- Automatically identified categorical columns using `select_dtypes`
+- Applied two encoding approaches:
+- `pd.get_dummies` — quick one-hot encoding for exploratory scripts
+- `sklearn.OneHotEncoder` — production-ready encoding that can be saved/reused on new data
+- Combined encoded features back into a final dataset (`df_final`)
+**3. Train/Test Split**
+- Split data using `train_test_split` (80/20)
+- Used `stratify=y` to preserve class balance
+- Printed resulting shapes to confirm split
+**4. Data Cleaning for Modeling**
+- Dropped identifier and leakage-prone columns:
+- `delivery_id`, `driver_id`, `order_date`, `delivery_date`, `failure_reason`, `delivery_status`, `delivery_failure`, `actual_time_hours`
+- Re-encoded categorical features in the train/test sets
+- Aligned train/test columns to avoid mismatches from differing category values
+- Confirmed target variable (`y_train`, `y_test`) was correctly set to `delivery_failure` for              classification
+**5. Baseline Model — Random Forest Classifier**
+- Trained a `RandomForestClassifier` (100 estimators, `random_state=42`)
+- Evaluated performance using:
+- Accuracy score
+- Classification report (precision, recall, F1-score)
+- Extracted and visualized top 15 feature importances using a horizontal bar chart
+
+

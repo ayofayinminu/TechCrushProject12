@@ -30,29 +30,31 @@ with col1:
 
     delivery_partner = st.selectbox(
         "Delivery Partner",
-        ["GIG Logistics","Jumia Logistics","Kwik","DHL Nigeria","FedEx Nigeria","GUO Logistics","Kobo360"]
+        ["Jumia Logistics", "Kobo360", "GIG Logistics", "Kwik"]
     )
 
     state = st.selectbox(
         "State",
-        ["Lagos","FCT","Oyo","Ogun","Rivers","Kano","Enugu"]
+        ["Lagos","FCT","Oyo","Rivers","Kano","Enugu"]
     )
 
-    city = st.text_input("City")
+    city = st.selectbox(
+        "State",
+        ["Ibadan", "Garki", "Kano", "Lekki", "Enugu", "Port Harcourt", "Wuse", "Ikeja", "Yaba"]
 
     package_type = st.selectbox(
         "Package Type",
-        ["Electronics","Food","Documents","Fashion","Medicine","Furniture"]
+        ["Electronics","Food","Documents"]
     )
 
     vehicle_type = st.selectbox(
         "Vehicle Type",
-        ["Bike","Car","Van","Truck"]
+        ["Bike","Van","Truck"]
     )
 
     delivery_mode = st.selectbox(
         "Delivery Mode",
-        ["Standard","Express","Same Day"]
+        ["Standard"]
     )
 
     weather = st.selectbox(
@@ -64,7 +66,7 @@ with col2:
 
     traffic = st.selectbox(
         "Traffic",
-        ["Low","Moderate","Heavy"]
+        ["Low","Medium","High"]
     )
 
     road = st.selectbox(
@@ -72,45 +74,20 @@ with col2:
         ["Good","Fair","Bad"]
     )
 
-    distance = st.number_input(
-        "Distance (km)",
-        1.0,
-        1000.0,
-        20.0
-    )
+    distance = st.slider("Distance (km)", min_value=1.0, max_value=80.0, value=10.0)
 
-    weight = st.number_input(
-        "Package Weight (kg)",
-        0.1,
-        100.0,
-        2.0
-    )
+    weight = package_weight_kg = st.slider("Package Weight (kg)", min_value=0.2, max_value=60.0, value=5.0)
 
-    expected_time = st.number_input(
-        "Expected Time (hours)",
-        1.0,
-        48.0,
-        5.0
-    )
+    expected_time_hours = st.slider("Expected Time (hrs)", min_value=1.0, max_value=25.0, value=2.0)
 
-    driver_exp = st.slider(
-        "Driver Experience",
-        0,
-        20,
-        5
-    )
+    driver_exp = st.slider("Driver Experience", min_value=0, max_value=15, value=6)
 
-    delivery_attempts = st.slider(
-        "Delivery Attempts",
-        1,
-        5,
-        1
-    )
+    delivery_attempts = st.slider("Delivery Attempts", min_value=1, max_value=5, value=1)
 
     delivery_cost = st.number_input(
         "Delivery Cost (₦)",
-        500,
-        100000,
+        1509,
+        49999,
         5000
     )
 

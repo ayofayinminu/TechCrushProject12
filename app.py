@@ -91,6 +91,7 @@ with col2:
     weight = round(weight)
 
     expected_time = st.slider("Expected Time (hrs)", min_value=1.0, max_value=25.0, value=2.0)
+    expected_time = round(expected_time)
 
     driver_exp = st.slider("Driver Experience", min_value=0, max_value=15, value=6)
 

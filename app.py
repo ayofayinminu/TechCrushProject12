@@ -62,11 +62,6 @@ with col1:
         ["Bike","Van","Truck"]
     )
 
-    delivery_mode = st.selectbox(
-        "Delivery Mode",
-        ["Standard"]
-    )
-
     weather = st.selectbox(
         "Weather",
         ["Sunny","Rainy","Heavy Rain","Harmattan"]
@@ -138,7 +133,7 @@ if st.button("Predict Delivery"):
         f"city_{city}",
         f"package_type_{package_type}",
         f"vehicle_type_{vehicle_type}",
-        f"delivery_mode_{delivery_mode}",
+        f"delivery_mode_{"Standard"}",
         f"weather_condition_{weather}",
         f"traffic_level_{traffic}",
         f"road_condition_{road}"
@@ -173,6 +168,7 @@ if st.button("Predict Delivery"):
 - Verify delivery address.
 - Assign an experienced driver.
 - Consider an alternative route.
+- Consider changing the Vehicle Type.
 """)
 
     else:

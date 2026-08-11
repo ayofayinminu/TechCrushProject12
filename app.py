@@ -33,14 +33,24 @@ with col1:
         ["Jumia Logistics", "Kobo360", "GIG Logistics", "Kwik"]
     )
 
+    state_city_map = {
+        "Lagos": ["Lekki", "Ikeja", "Yaba"],
+        "FCT": ["Garki", "Wuse"],
+        "Oyo": ["Ibadan"],
+        "Rivers": ["Port Harcourt"],
+        "Kano": ["Kano"],
+        "Enugu": ["Enugu"]
+    }
+
     state = st.selectbox(
         "State",
-        ["Lagos","FCT","Oyo","Rivers","Kano","Enugu"]
+        list(state_city_map.keys())
     )
 
     city = st.selectbox(
-        "State",
-        ["Ibadan", "Garki", "Kano", "Lekki", "Enugu", "Port Harcourt", "Wuse", "Ikeja", "Yaba"])
+        "City",
+        state_city_map[state]
+    )
 
     package_type = st.selectbox(
         "Package Type",

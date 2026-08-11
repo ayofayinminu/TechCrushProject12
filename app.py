@@ -78,7 +78,7 @@ with col2:
 
     weight = package_weight_kg = st.slider("Package Weight (kg)", min_value=0.2, max_value=60.0, value=5.0)
 
-    expected_time_hours = st.slider("Expected Time (hrs)", min_value=1.0, max_value=25.0, value=2.0)
+    expected_time = st.slider("Expected Time (hrs)", min_value=1.0, max_value=25.0, value=2.0)
 
     driver_exp = st.slider("Driver Experience", min_value=0, max_value=15, value=6)
 

@@ -90,7 +90,7 @@ with col2:
     weight = st.slider("Package Weight (kg)", min_value=0.2, max_value=60.0, value=5.0)
     weight = round(weight)
 
-    expected_time = st.slider("Expected Time (hrs)", min_value=1.0, max_value=25.0, value=2.0)
+    expected_time = st.slider("Expected Time (hrs)", min_value=1.0, max_value=25.0, step=0.5 value=2.0)
     expected_time = round(expected_time)
 
     driver_exp = st.slider("Driver Experience", min_value=0, max_value=15, value=6)
@@ -167,7 +167,7 @@ if st.button("Predict Delivery"):
 
     st.subheader("Recommendation")
 
-    if probability > 0.70:
+    if probability > 0.50:
         st.warning("""
 - Contact customer before dispatch.
 - Verify delivery address.

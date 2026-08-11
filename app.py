@@ -40,7 +40,7 @@ with col1:
 
     city = st.selectbox(
         "State",
-        ["Ibadan", "Garki", "Kano", "Lekki", "Enugu", "Port Harcourt", "Wuse", "Ikeja", "Yaba"]
+        ["Ibadan", "Garki", "Kano", "Lekki", "Enugu", "Port Harcourt", "Wuse", "Ikeja", "Yaba"])
 
     package_type = st.selectbox(
         "Package Type",

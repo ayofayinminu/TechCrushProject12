@@ -67,18 +67,25 @@ with col1:
         ["Sunny","Rainy","Heavy Rain","Harmattan"]
     )
 
-with col2:
-
     traffic = st.selectbox(
         "Traffic",
         ["Low","Medium","High"]
     )
+
+with col2:
 
     road = st.selectbox(
         "Road Condition",
         ["Good","Fair","Bad"]
     )
 
+    delivery_cost = st.number_input(
+        "Delivery Cost (₦)",
+        1509,
+        49999,
+        5000
+    )
+    
     distance = st.slider("Distance (km)", min_value=1, max_value=80, value=10)
     distance = round(distance)
 
@@ -91,13 +98,6 @@ with col2:
     driver_exp = st.slider("Driver Experience", min_value=0, max_value=15, value=6)
 
     delivery_attempts = st.slider("Delivery Attempts", min_value=1, max_value=5, value=1)
-
-    delivery_cost = st.number_input(
-        "Delivery Cost (₦)",
-        1509,
-        49999,
-        5000
-    )
 
 
 # Prediction
